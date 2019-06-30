@@ -1,0 +1,10 @@
+{
+  "name": "serverless-pdf",
+  "version": 2,
+  "builds": [
+    { "src": "src/pdf.js", "use": "@now/node", "config": { "maxLambdaSize": "40mb" } }
+  ],
+  "routes": [
+    { "src": "/(.+)", "dest": "/src/pdf.js" }
+  ]
+}
